@@ -1,11 +1,11 @@
 provider "aws" {
-  region = "eu-central-1"
-  access_key = "AAAAAAAAAAAAAAAAAAA"
-  secret_key = "BBBBBBBBBBBBBBBBBBB"
+  region = "us-east-1"
+  access_key = "AKIA5ABGKTA3UR63P5XY"
+  secret_key = "YBQ7khYxh2bRysUE82PyMv/QHqqUQqbJ5HnRH0CL"
 }
 
 resource "aws_instance" "example" {
-  ami           = "ami-0cc0a36f626a4fdf5"
+  ami           = "ami-06ca3ca175f37dd66"
   instance_type = "t2.micro"
   vpc_security_group_ids = ["${aws_security_group.instance.id}"]
   user_data = <<-EOF
